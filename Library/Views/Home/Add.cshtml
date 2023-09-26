@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model Book
+<form asp-controller="home" asp-action="add" method="post">
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Id</span>
+        <input asp-for="@Model.Id" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+        <input asp-for="@Model.Name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Author</span>
+        <input asp-for="@Model.Author" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Price</span>
+        <input asp-for="@Model.Price" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <div class="actions">
+
+        <a asp-controller="home" asp-action="index" class="btn btn-danger active" aria-current="page">Cancel</a>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </div>
+
+</form>
+
